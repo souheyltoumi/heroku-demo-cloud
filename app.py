@@ -16,7 +16,7 @@ import pickle
 app=Flask(__name__)
 
 app.config["MONGO_DBNAME"]="users"
-app.config["MONGO_URI"]="mongodb://souheil:Passatjetta25190731@souheil-shard-00-00-kqdwl.mongodb.net:27017,souheil-shard-00-01-kqdwl.mongodb.net:27017,souheil-shard-00-02-kqdwl.mongodb.net:27017/test?ssl=true&replicaSet=souheil-shard-0&authSource=admin&retryWrites=true&w=majority"
+app.config["MONGO_URI"]="mongodb://******:*******@souheil-shard-00-00-kqdwl.mongodb.net:27017,souheil-shard-00-01-kqdwl.mongodb.net:27017,souheil-shard-00-02-kqdwl.mongodb.net:27017/test?ssl=true&replicaSet=souheil-shard-0&authSource=admin&retryWrites=true&w=majority"
 mongo=PyMongo(app)
 CORS(app)
 
@@ -44,8 +44,8 @@ def verify_password(stored_password, provided_password):
     pwdhash = binascii.hexlify(pwdhash).decode('ascii')
     return pwdhash == stored_password
 def sendVerficationMail(receiver_email,password2):
-    sender_email = "souheil.toumi14@gmail.com"
-    password ="Passatjetta25190731"
+    sender_email = "******************@gmail.com"
+    password ="****************"
 
     message = MIMEMultipart("alternative")
     message["Subject"] = "Register Password"
